@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=@1.0
+Name=Earth
+Name[zh_CN]=世界之窗
+GenericName=Example App(Earth) Tutorial
+X-GNOME-FullName=Gnome Example App(Earth) Tutorial
+X-GNOME-FullName[zh_CN]=世界之窗教程
+Comment=Image your world
+Exec=@bindir@exampleapp
+TryExec=exampleapp
+Icon=exampleapp
+Terminal=false
+Type=Application
+NoDisplay=false
+StartupNotify=true
+Categories=Graphics;GTK;
