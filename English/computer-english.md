@@ -100,16 +100,16 @@ Table of Contents
 | Initially | 最初，原来 |
 | Originally | 原本，原来 |
 | Append | 追加，附加 |
-component 部件，组成部分
-roaming 漫游
-supplicant 请求者
-negotiation 协商
-key 秘钥
-implement 实现
-deliberate 故意
-tunnel 隧道
-doxygen 文档生成器；文档系统；注释
-mnemonic 助记符
-ampersand 连字号
-prefixed 前缀
-embedded 嵌入式的
+| component | 部件，组成部分|
+| roaming | 漫游 |
+| supplicant | 请求者 |
+| negotiation | 协商 |
+| key | 秘钥 |
+| implement | 实现 |
+| deliberate | 故意 |
+| tunnel | 隧道 |
+| doxygen | 文档生成器；文档系统；注释 |
+| mnemonic | 助记符 |
+| ampersand | 连字号 |
+| prefixed | 前缀 |
+| embedded | 嵌入式的 |
