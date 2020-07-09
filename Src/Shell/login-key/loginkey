@@ -1,0 +1,27 @@
+#!/bin/bash
+
+sysDate=$(date "+%Y-%m-%d %H:%M:%S")
+timestamp=$(date -d "${sysDate}" "+%s")
+timestamp=""
+
+keyLen=2048
+keyDir="/home/yusq"
+
+/usr/bin/genNewKey.sh  "$timestamp" "$keyLen" "$keyDir"
+
+# chmod 766 login-key.exp
+
+rootName="root"
+rootPasswd="1"
+cmdIP=$(which ifconfig)
+localIP=$("$cmdIP" -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:")
+keyName="$timestamp"".pub"
+
+/usr/bin/login-key.exp  "$rootName" "$localIP" "$keyName" "$keyDir" "$rootPasswd"
+
+# sign_and_send_pubkey: signing failed: agent refused operation
+eval "$(ssh-agent -s)"
+ssh-add
+ssh "$rootName"@"$localIP"
+
+

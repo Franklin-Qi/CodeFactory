@@ -4,6 +4,11 @@
 [![IRC Network](https://img.shields.io/badge/irc-freenode-blue.svg "IRC Freenode")](https://webchat.freenode.net/?channels=mate)
 ![AppVeyor](https://img.shields.io/appveyor/build/yusq77/kylin-scanner?style=plastic)
 
+## 整合不同的仓库到统一的仓库CodeFactory中
+> git clone xxx.git
+> cd xxx/; rm -rf .git/
+> git add . ; git commit -m "xxx" ; git push
+
 ## 取消git init操作
 > rm -rf .git
 
