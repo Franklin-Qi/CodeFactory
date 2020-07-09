@@ -40,13 +40,13 @@ cp exampleapp.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/48x48/apps/
 %clean
 #rm -rf $RPM_BUILD_ROOT
 
-#%post 
+#%postg
 
 #%postun
 
 
 # Collect files from %{_buildrootdir} to system directory
-%files 
+%filesg
 %defattr(-,root,root)
 %{_bindir}/exampleapp
 %{_datadir}/applications/org.gtk.exampleapp.desktop
