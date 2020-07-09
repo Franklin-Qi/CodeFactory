@@ -1,0 +1,28 @@
+#!/usr/bin/expect
+
+set timeout 10
+#set PORT [lindex $argv 1]
+set USERNAME [lindex $argv 0]
+set IP [lindex $argv 1]
+set PASSWORD [lindex $argv 2]
+spawn ssh ${USERNAME}@${IP} 
+# expect { 必须在同一行
+expect {
+  "(yes/no)?"
+  {
+    send "yes\n"
+    expect "*assword*" { send "${PASSWORD}\n" }
+    expect "*密码*" { send "${PASSWORD}\n"}
+  }
+  "*assword*"
+  {
+    send "$PASSWORD\n"
+  }
+  "*密码*"
+  {
+    send "$PASSWORD\n"
+  }
+}
+# expect "#"
+# send "ls"
+interact

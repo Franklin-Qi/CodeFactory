@@ -1,0 +1,31 @@
+#!/bin/bash
+# login local root
+
+option="$1"
+
+# Local 
+cmdIP=$(which ifconfig)
+localIP=$("$cmdIP" -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:")
+localName="root"
+localPassword="1"
+
+# Remote
+remoteIP="***"
+remoteName="***"
+remotePasswd="***"
+
+# chmod 777 remote-login.exp
+
+# Default local login
+if [ "$#" -lt 1 ]; then
+    /usr/bin/remote-login.exp "$localName" "$localIP" "$localPassword"
+fi
+
+if [[ $option =~ "local" ]]; then
+    /usr/bin/remote-login.exp "$localName" "$localIP" "$localPassword"
+elif [[ $option =~ "remote" ]]; then
+    /usr/bin/remote-login.exp "$remoteName" "$remoteIP" "$remotePasswd"
+else
+    echo "Args not match correctly."
+    exit 1
+fi
