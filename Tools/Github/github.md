@@ -4,6 +4,13 @@
 [![IRC Network](https://img.shields.io/badge/irc-freenode-blue.svg "IRC Freenode")](https://webchat.freenode.net/?channels=mate)
 ![AppVeyor](https://img.shields.io/appveyor/build/yusq77/kylin-scanner?style=plastic)
 
+## 加入Github Developer Program
+[Github API Guide](https://github.com/developer/thanks?account=yusq77)
+好处：
+> 1. 提前知道Github的新功能试用资格
+> 2. Github 会员徽章
+> 3. 熟悉GitHub流程
+
 ## 整合不同的仓库到统一的仓库CodeFactory中
 > git clone xxx.git
 > cd xxx/; rm -rf .git/
