@@ -418,5 +418,10 @@ sudo ctags -I __THROW --file-scope=yes --langmap=c:+.h --languages=c,c++ --links
 vim xxx.txt 之后使用 :X 进行输入密码，上传到GitHub的文件就是加密过的，这点很不错，可以保存自己的私有文件在共有仓库中。
 这样就可以在同一个仓库进行grep等操作。
 
+## 行尾增加指定字符
+> : 12,$s/$/ \|/g
+
+## 行首增加指定字符
+> : 12,15s/^/#/g
 
 [参考](https://www.cnblogs.com/zl-graduate/p/5777711.html)
