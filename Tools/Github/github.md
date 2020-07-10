@@ -1,8 +1,57 @@
-# github
-[![Build Status](https://travis-ci.org/mate-desktop/caja.svg?branch=master)](https://travis-ci.org/mate-desktop/caja)
-[![Release](https://img.shields.io/github/v/release/mate-desktop/caja)](https://github.com/mate-desktop/caja/releases)
-[![IRC Network](https://img.shields.io/badge/irc-freenode-blue.svg "IRC Freenode")](https://webchat.freenode.net/?channels=mate)
-![AppVeyor](https://img.shields.io/appveyor/build/yusq77/kylin-scanner?style=plastic)
+# github 基本操作
+
+## markdown增加目录
+在GitHub中[TOC]不管用，需要专门的软件才行。
+```
+# install
+wget https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc
+sudo mv gh-md-toc  /usr/bin/gh-md-toc
+sudo chmod a+x /usr/bin/gh-md-toc
+
+# Use
+gh-md-toc xxx.md
+从终端拷贝内容到xxx.md 的第一行
+
+优化可以在.bashrc增加一个md-toc 函数，命令行如下：
+md-toc xxx.md
+```
+
+## git恢复某个已修改的文件
+```
+checkout => 撤销未提交的修改,也就是恢复到GitHub 未修改的状态
+
+恢复某个已修改的文件（撤销未提交的修改）：
+$ Git checkout file-name
+
+revert => 已经提交过的修改,通过这个可以重新提交
+还原已提交的修改（已经提交过的修改，可以反悔～）
+
+还原最近一次提交的修改：
+$ git revert HEAD
+
+还原指定版本的修改：
+$ git revert commit-id
+```
+
+## Account改名后，本地仓库授权失败
+```
+# remove origin repo
+git remote -v
+git remote remove origin
+
+# add current repo
+git remove add origin https://xxx.git
+git fetch origin
+git merge origin/master
+
+# update Auth message
+git config --list
+git config --global user.name xxx
+git config --global user.email xxx
+
+# git push
+git push --set-upstream origin master
+```
 
 ## 加入Github Developer Program
 [Github API Guide](https://github.com/developer/thanks?account=yusq77)
