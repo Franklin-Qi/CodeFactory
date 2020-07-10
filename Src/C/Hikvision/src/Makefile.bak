@@ -1,0 +1,18 @@
+CC=gcc
+
+SRCS=main.c\
+	log.c
+
+OBJS=$(SRCS:.c=.o)
+
+EXEC=TEST
+
+start:$(OBJS)
+#	$(CC) -o $(EXEC) $(OBJS) -L../../lib64 -lhac_sqldual  -lsqlite3  -lxml2 -lxmlconfig -lunionencrypt
+
+$(CC) -o $(EXEC) $(OBJS) -L.  -lhcnetsdk -lhpr -lHCCore
+.cpp.o:
+	$(CC) -o $@ -c $<
+
+clean:
+	rm -rf $(OBJS) $(EXEC) *.log

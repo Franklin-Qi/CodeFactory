@@ -1,0 +1,115 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BYTE	HCNetSDK.h	/^typedef	unsigned char			BYTE;$/;"	t
+CC	Makefile	/^CC=gcc$/;"	m
+DWORD	HCNetSDK.h	/^typedef	unsigned int			 DWORD;$/;"	t
+EXEC	Makefile	/^EXEC=TEST$/;"	m
+HANDLE	HCNetSDK.h	/^typedef	void*							HANDLE;$/;"	t
+HCNETSDK_H	HCNetSDK.h	2;"	d
+INT64	HCNetSDK.h	/^typedef	signed long long	 INT64;$/;"	t
+LOG_FILE_PATH	log.c	12;"	d	file:
+LOG_FILE_PATH	log.h	9;"	d
+LOG_PARAMS	log.c	13;"	d	file:
+LOG_PARAMS	log.h	10;"	d
+LONG	HCNetSDK.h	/^typedef	int								LONG;$/;"	t
+LPDWORD	HCNetSDK.h	/^typedef	unsigned int*			LPDWORD; $/;"	t
+LPNET_DVR_DEVICEINFO_V30	HCNetSDK.h	/^}NET_DVR_DEVICEINFO_V30, *LPNET_DVR_DEVICEINFO_V30;$/;"	t	typeref:struct:NET_DVR_DEVICEINFO_V30
+LPNET_DVR_IPADDR	HCNetSDK.h	/^}NET_DVR_IPADDR, *LPNET_DVR_IPADDR;$/;"	t	typeref:struct:NET_DVR_IPADDR
+LPNET_DVR_USER_INFO_V40	HCNetSDK.h	/^}NET_DVR_USER_INFO_V40,*LPNET_DVR_USER_INFO_V40;$/;"	t	typeref:struct:NET_DVR_USER_INFO_V40
+LPNET_DVR_USER_V40	HCNetSDK.h	/^}NET_DVR_USER_V40,*LPNET_DVR_USER_V40;$/;"	t	typeref:struct:NET_DVR_USER_V40
+LPVOID	HCNetSDK.h	/^typedef	void*							LPVOID;$/;"	t
+MACADDR_LEN	HCNetSDK.h	25;"	d
+MAX_CHANNUM_V40	HCNetSDK.h	26;"	d
+MAX_RIGHT	HCNetSDK.h	27;"	d
+MAX_USERNUM_V30	HCNetSDK.h	24;"	d
+NAME_LEN	HCNetSDK.h	29;"	d
+NET_DVR_DEVICEINFO_V30	HCNetSDK.h	/^typedef struct NET_DVR_DEVICEINFO_V30$/;"	s
+NET_DVR_DEVICEINFO_V30	HCNetSDK.h	/^}NET_DVR_DEVICEINFO_V30, *LPNET_DVR_DEVICEINFO_V30;$/;"	t	typeref:struct:NET_DVR_DEVICEINFO_V30
+NET_DVR_GET_USERCFG_V40	HCNetSDK.h	31;"	d
+NET_DVR_IPADDR	HCNetSDK.h	/^typedef struct NET_DVR_IPADDR$/;"	s
+NET_DVR_IPADDR	HCNetSDK.h	/^}NET_DVR_IPADDR, *LPNET_DVR_IPADDR;$/;"	t	typeref:struct:NET_DVR_IPADDR
+NET_DVR_SET_USERCFG_V40	HCNetSDK.h	32;"	d
+NET_DVR_USER_INFO_V40	HCNetSDK.h	/^typedef struct NET_DVR_USER_INFO_V40$/;"	s
+NET_DVR_USER_INFO_V40	HCNetSDK.h	/^}NET_DVR_USER_INFO_V40,*LPNET_DVR_USER_INFO_V40;$/;"	t	typeref:struct:NET_DVR_USER_INFO_V40
+NET_DVR_USER_V40	HCNetSDK.h	/^typedef struct NET_DVR_USER_V40$/;"	s
+NET_DVR_USER_V40	HCNetSDK.h	/^}NET_DVR_USER_V40,*LPNET_DVR_USER_V40;$/;"	t	typeref:struct:NET_DVR_USER_V40
+OBJS	Makefile	/^OBJS=$(SRCS:.c=.o)$/;"	m
+PASSWD_LEN	HCNetSDK.h	28;"	d
+SERIALNO_LEN	HCNetSDK.h	30;"	d
+SHORT	HCNetSDK.h	/^typedef	short							SHORT;$/;"	t
+SIZE_16M	log.c	11;"	d	file:
+SIZE_16M	log.h	8;"	d
+SRCS	Makefile	/^SRCS=main.c\\$/;"	m
+STR_LEN_2048	log.c	14;"	d	file:
+STR_LEN_2048	log.h	11;"	d
+UINT	HCNetSDK.h	/^typedef	unsigned int			 UINT;$/;"	t
+UINT64	HCNetSDK.h	/^typedef	unsigned long long UINT64;$/;"	t
+USHORT	HCNetSDK.h	/^typedef	unsigned short		 USHORT;$/;"	t
+VS_ERR	log.c	15;"	d	file:
+VS_ERR	log.h	12;"	d
+VS_OK	log.c	16;"	d	file:
+VS_OK	log.h	13;"	d
+WORD	HCNetSDK.h	/^typedef	unsigned short		 WORD;$/;"	t
+_LOG_H_	log.h	2;"	d
+byAlarmInPortNum	HCNetSDK.h	/^		BYTE byAlarmInPortNum;								\/\/报警输入个数$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byAlarmOffRight	HCNetSDK.h	/^    BYTE              byAlarmOffRight;  $/;"	m	struct:NET_DVR_USER_INFO_V40
+byAlarmOnRight	HCNetSDK.h	/^    BYTE              byAlarmOnRight;$/;"	m	struct:NET_DVR_USER_INFO_V40
+byAlarmOutPortNum	HCNetSDK.h	/^		BYTE byAlarmOutPortNum;								\/\/报警输出个数$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byAudioChanNum	HCNetSDK.h	/^		BYTE byAudioChanNum;								\/\/语音通道数$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byBypassRight	HCNetSDK.h	/^    BYTE              byBypassRight;$/;"	m	struct:NET_DVR_USER_INFO_V40
+byChanNum	HCNetSDK.h	/^		BYTE byChanNum;										\/\/模拟通道个数$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byDVRType	HCNetSDK.h	/^		BYTE byDVRType;										\/\/设备类型, 1:DVR 2:ATM DVR 3:DVS ......$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byDiskNum	HCNetSDK.h	/^		BYTE byDiskNum;										\/\/硬盘个数$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byHighDChanNum	HCNetSDK.h	/^		BYTE byHighDChanNum;				\/\/数字通道个数，高位$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byIPChanNum	HCNetSDK.h	/^		BYTE byIPChanNum;										\/\/最大数字通道个数，低位	$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byLanguageType	HCNetSDK.h	/^		BYTE byLanguageType;\/\/ 支持语种能力,按位表示,每一位0-不支持,1-支持	$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byLocalRight	HCNetSDK.h	/^    BYTE              byLocalRight[MAX_RIGHT];$/;"	m	struct:NET_DVR_USER_INFO_V40
+byMACAddr	HCNetSDK.h	/^    BYTE              byMACAddr[MACADDR_LEN];$/;"	m	struct:NET_DVR_USER_INFO_V40
+byMainProto	HCNetSDK.h	/^		BYTE byMainProto;						\/\/主码流传输协议类型 0-private, 1-rtsp,2-同时支持private和rtsp$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byMirrorChanNum	HCNetSDK.h	/^		BYTE	byMirrorChanNum;		\/\/镜像通道个数，<录播主机中用于表示导播通道>$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byMultiStreamProto	HCNetSDK.h	/^		BYTE byMultiStreamProto;\/\/是否支持多码流,按位表示,0-不支持,1-支持,bit1-码流3,bit2-码流4,bit7-主码流，bit-8子码流$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byPriority	HCNetSDK.h	/^    BYTE              byPriority;  $/;"	m	struct:NET_DVR_USER_INFO_V40
+byRemoteRight	HCNetSDK.h	/^    BYTE              byRemoteRight[MAX_RIGHT];$/;"	m	struct:NET_DVR_USER_INFO_V40
+byRes	HCNetSDK.h	/^    BYTE              byRes[118];$/;"	m	struct:NET_DVR_USER_INFO_V40
+byRes2	HCNetSDK.h	/^		BYTE	byRes2;				\/\/保留$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byStartChan	HCNetSDK.h	/^		BYTE byStartChan;										\/\/起始通道号,例如DVS-1,DVR - 1$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byStartDChan	HCNetSDK.h	/^		BYTE byStartDChan;				\/\/起始数字通道号,0表示无效$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byStartDTalkChan	HCNetSDK.h	/^		BYTE byStartDTalkChan;		\/\/起始数字对讲通道号，区别于模拟对讲通道号，0表示无效$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byStartVoiceInChanNo	HCNetSDK.h	/^		BYTE byStartVoiceInChanNo; \/\/音频输入起始通道号 0表示无效$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+bySubProto	HCNetSDK.h	/^		BYTE bySubProto;								\/\/子码流传输协议类型0-private, 1-rtsp,2-同时支持private和rtsp$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+bySupport	HCNetSDK.h	/^		BYTE bySupport;				\/\/能力，位与结果为0表示不支持，1表示支持，$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+bySupport1	HCNetSDK.h	/^		BYTE bySupport1;				\/\/ 能力集扩充，位与结果为0表示不支持，1表示支持$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+bySupport2	HCNetSDK.h	/^		BYTE bySupport2; \/*能力，位与结果为0表示不支持，非0表示支持														$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+bySupport3	HCNetSDK.h	/^		BYTE bySupport3; \/\/能力集扩展，位与结果为0表示不支持，1表示支持$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+bySupport4	HCNetSDK.h	/^		BYTE bySupport4;				\/\/能力集扩展，位与结果为0表示不支持，1表示支持$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+bySupport5	HCNetSDK.h	/^		BYTE	bySupport5;	\/\/按位表示,0-不支持,1-支持,bit0-支持多码流$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+bySupport6	HCNetSDK.h	/^		BYTE	bySupport6;	 \/\/能力，按位表示，0-不支持,1-支持$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+bySupport7	HCNetSDK.h	/^		BYTE bySupport7;	 \/\/能力,按位表示,0-不支持,1-支持$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byVoiceInChanNum	HCNetSDK.h	/^		BYTE byVoiceInChanNum;	 \/\/音频输入通道数 $/;"	m	struct:NET_DVR_DEVICEINFO_V30
+byZeroChanNum	HCNetSDK.h	/^		BYTE byZeroChanNum;						\/\/零通道编码个数 \/\/2010-01-16$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+debugInfo	log.c	/^int debugInfo(char *pLogPath, char *pFile, const char *pFuncName, int iLineNumb, char *fmt, ...)$/;"	f
+dwLocalBackupRight	HCNetSDK.h	/^    DWORD             dwLocalBackupRight[MAX_CHANNUM_V40];$/;"	m	struct:NET_DVR_USER_INFO_V40
+dwLocalPTZRight	HCNetSDK.h	/^    DWORD             dwLocalPTZRight[MAX_CHANNUM_V40];$/;"	m	struct:NET_DVR_USER_INFO_V40
+dwLocalPlaybackRight	HCNetSDK.h	/^    DWORD             dwLocalPlaybackRight[MAX_CHANNUM_V40];$/;"	m	struct:NET_DVR_USER_INFO_V40
+dwLocalRecordRight	HCNetSDK.h	/^    DWORD             dwLocalRecordRight[MAX_CHANNUM_V40];$/;"	m	struct:NET_DVR_USER_INFO_V40
+dwMaxUserNum	HCNetSDK.h	/^  DWORD                    dwMaxUserNum;$/;"	m	struct:NET_DVR_USER_V40
+dwNetPTZRight	HCNetSDK.h	/^    DWORD             dwNetPTZRight[MAX_CHANNUM_V40];$/;"	m	struct:NET_DVR_USER_INFO_V40
+dwNetPlaybackRight	HCNetSDK.h	/^    DWORD             dwNetPlaybackRight[MAX_CHANNUM_V40];$/;"	m	struct:NET_DVR_USER_INFO_V40
+dwNetPreviewRight	HCNetSDK.h	/^    DWORD             dwNetPreviewRight[MAX_CHANNUM_V40];$/;"	m	struct:NET_DVR_USER_INFO_V40
+dwNetRecordRight	HCNetSDK.h	/^    DWORD             dwNetRecordRight[MAX_CHANNUM_V40];$/;"	m	struct:NET_DVR_USER_INFO_V40
+dwSize	HCNetSDK.h	/^  DWORD                    dwSize;$/;"	m	struct:NET_DVR_USER_V40
+giInfoNumb	log.c	/^int giInfoNumb = 1;$/;"	v
+main	main.c	/^int main()$/;"	f
+sIpV4	HCNetSDK.h	/^  char    sIpV4[16];  $/;"	m	struct:NET_DVR_IPADDR
+sIpV6	HCNetSDK.h	/^  BYTE    sIpV6[128];$/;"	m	struct:NET_DVR_IPADDR
+sPassword	HCNetSDK.h	/^    BYTE              sPassword[PASSWD_LEN];$/;"	m	struct:NET_DVR_USER_INFO_V40
+sSerialNumber	HCNetSDK.h	/^		BYTE sSerialNumber[SERIALNO_LEN];	\/\/序列号$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+sUserName	HCNetSDK.h	/^    BYTE              sUserName[NAME_LEN];$/;"	m	struct:NET_DVR_USER_INFO_V40
+struUser	HCNetSDK.h	/^  NET_DVR_USER_INFO_V40    struUser[MAX_USERNUM_V30];$/;"	m	struct:NET_DVR_USER_V40
+struUserIP	HCNetSDK.h	/^    NET_DVR_IPADDR    struUserIP;  $/;"	m	struct:NET_DVR_USER_INFO_V40
+wDevType	HCNetSDK.h	/^		WORD wDevType;							\/\/设备型号$/;"	m	struct:NET_DVR_DEVICEINFO_V30
+wStartMirrorChanNo	HCNetSDK.h	/^		WORD wStartMirrorChanNo;	\/\/起始镜像通道号$/;"	m	struct:NET_DVR_DEVICEINFO_V30
