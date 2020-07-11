@@ -68,7 +68,7 @@
 
 1. 生成 `debian` 目录
 
-   ```debmake -e dingjing@live.cn -u 0.0.0 -f demo1 -m -n```
+   ```debmake -e yushuoqi@kylinos.cn -u 1.0.0 -f kylin-scanner -m -n```
 
 2. 修改 `debian/control` 文件
 
