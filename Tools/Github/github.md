@@ -1,5 +1,22 @@
 # github 基本操作
 
+## 通过ssh进行下载仓库
+有时http网速不行导致下载远程仓库失败，可以通过ssh进行git clone
+```
+# 1. 配置ssh
+$ ssh-keygen -t rsa -C "yushuoqi@kylinos.cn"
+$ cat ~/.ssh/id_rsa.pub
+将上面的ssh秘钥在网页上新增SSH
+
+# 2. 测试ssh
+$ ssh -T git@gitee.com
+返回 Hi XXX! You've successfully authenticated, but Gitee.com does not provide shell access. 内容，则证明添加成功。
+
+# 3. git clone
+在网页上的仓库clone处，将HTTPS换成SSH得到git clone地址
+$ git clone xxx.git
+```
+
 ## 增加语言设置为c++
 仓库下新建.gitattributes，通过src linguist-language=dst 进行设置语言。
 
