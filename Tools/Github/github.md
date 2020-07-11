@@ -1,5 +1,8 @@
 # github 基本操作
 
+## 增加语言设置为c++
+仓库下新建.gitattributes，通过src linguist-language=dst 进行设置语言。
+
 ## markdown增加目录
 在GitHub中[TOC]不管用，需要专门的软件才行。
 ```
