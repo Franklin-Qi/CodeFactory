@@ -113,3 +113,5 @@ Table of Contents
 | ampersand | 连字号 |
 | prefixed | 前缀 |
 | embedded | 嵌入式的 |
+| Interpreter | 解释器 |
+| Multiple | diverse, various 多样的 |

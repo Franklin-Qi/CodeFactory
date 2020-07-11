@@ -2,6 +2,9 @@
 ## 参考
 [脚本练习](http://www.freeos.com/guides/lsst/)
 
+## shell 配置文件
+> /etc/shells
+
 ## sed命令中使用shell变量
 dir=$(pwd)
 sed -i " $pwd"  # 此处使用双引号

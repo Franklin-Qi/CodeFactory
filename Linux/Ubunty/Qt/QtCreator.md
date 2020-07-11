@@ -1,4 +1,6 @@
 # QtCreator
+## 重命名快捷键
+`ctrl+shift+ri` 比在后端用grep、sed更快。
 
 ## 帮助文档F1
 帮助文档在指定的名称上面按F1,可多次F1,返回则是Esc;
