@@ -78,6 +78,7 @@ Table of Contents
 | Compliant | 兼容 |
 | Colormap | 色彩表 |
 | Specifically | 特别是 |
+| Access | 访问 |
 | Accessory | 配件，附件 |
 | Clutter | 混乱 |
 | Mildly | 温和地 |
@@ -115,3 +116,27 @@ Table of Contents
 | embedded | 嵌入式的 |
 | Interpreter | 解释器 |
 | Multiple | diverse, various 多样的 |
+| Implicitly shared | 隐式共享 |
+| Container classes | 容器类 |
+| resizable | 可改变大小的 |
+| expansion | 扩展，扩充 extension |
+| reentrant | 可重入的 |
+| memory consumption | 内存消耗 |
+| executable | 可执行的 |
+| In addition | 此外 and |
+| thread-safe | 线程安全的 |
+| traversing the items | 遍历项目，遍历元素 |
+| iterator | 迭代器 |
+| high-level functionality | 高级的功能性 |
+| whereas | 但是，用于2者比较 |
+| efficient | 高效的 |
+| sequential containers| 顺序容器 |
+| associative containers | 关联容器 |
+| implemented | 实现 |
+| prepend | 预先追加，在当前元素前插入 |
+| append | 追加，在当前元素后插入 |
+| occupy | 占用，使用 use |
+| consecutive memory locations | 连续的内存地址 |
+| semantic | 语义 |
+| lookup | 查找 lookup-instruction 查找命令 hash-lookup 哈希查找 search |
+
