@@ -139,4 +139,12 @@ Table of Contents
 | consecutive memory locations | 连续的内存地址 |
 | semantic | 语义 |
 | lookup | 查找 lookup-instruction 查找命令 hash-lookup 哈希查找 search |
-
+| overload | 重载 |
+| compatibility | 兼容性 |
+| equivalent | 等同的，相同的 |
+| intersect | 相交，交集 |
+| optical | 光学的 OCR(optical character recognition) 光学字符识别 |
+| depth first search | dfs 深度优先遍历 |
+| breath first search | bfs 广度优先遍历 |
+| topological sort | 拓扑排序 |
+| approach | 方法 method |
