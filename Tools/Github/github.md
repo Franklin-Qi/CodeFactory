@@ -1,5 +1,24 @@
 # github 基本操作
 
+##  两个仓库同步
+1. diff和patch对两个仓库进行同步,
+
+kylin-scanner-1是新fork的仓库，kylin-scanner是有修改的仓库，比kylin-scanner-1更新
+```
+diff -Nura kylin-scanner-1/src/ kylin-scanner/src/ > src.patch
+cd kylin-scanner-1/
+patch -p1 < ../src.patch
+```
+
+2. git diff 和 git apply 对两个仓库进行同步
+```
+cd kylin-scanner/
+git diff commitID1 commitID2 > src.patch
+cd kylin-scanner-1/
+git apply ../src.patch
+git status
+```
+
 ## 通过ssh进行下载仓库
 有时http网速不行导致下载远程仓库失败，可以通过ssh进行git clone
 ```
