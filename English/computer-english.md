@@ -148,3 +148,10 @@ Table of Contents
 | breath first search | bfs 广度优先遍历 |
 | topological sort | 拓扑排序 |
 | approach | 方法 method |
+| expressive | 富有表现力的 |
+| human readable | 人类可读的，可读性 |
+| Qt Meta-Object Language | QML 元对象语言 |
+| infrastructure | 基础架构 |
+| integrate with | 整合 |
+| interact with | 相互影响 |
+| dial | 刻度盘，表盘 |
