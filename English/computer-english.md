@@ -15,9 +15,8 @@ Table of Contents
 | Text cursor | 文本光标 |
 | Scale down | 规模缩小 |
 | Outlines | 概述 |
-| Invoke | 调用 |
-| Obsolete | 过时的 |
-| deprecated | 过时的 |
+| Invoke | 调用 call |
+| deprecated | 过时的 obsolete |
 | Symbol | 符号 |
 | Blank characters | 空白字符 |
 | Equal to | 等同于 |
@@ -148,3 +147,20 @@ Table of Contents
 | breath first search | bfs 广度优先遍历 |
 | topological sort | 拓扑排序 |
 | approach | 方法 method |
+| expressive | 富有表现力的 |
+| human readable | 人类可读的，可读性 |
+| Qt Meta-Object Language | QML 元对象语言 |
+| infrastructure | 基础架构 |
+| integrate with | 整合 |
+| interact with | 相互影响 |
+| dial | 刻度盘，表盘 |
+| palette | 调色盘 |
+| mask | 遮罩 |
+| processBar | 进度条 |
+| opacity | 不透明度 |
+| translucent | 半透明的 |
+| rectangle | 矩形 |
+| brush | 画刷 |
+| transformation | 变换,变换 |
+| composition | 组合，成分 |
+| audio | 音频的，音频 |

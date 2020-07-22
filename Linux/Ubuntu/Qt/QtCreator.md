@@ -1,4 +1,9 @@
 # QtCreator
+## Your GStreamer installation is missing a plug-in 
+QMediaPlayer error:
+> sudo apt-get install ubuntu-restricted-extras
+
+
 ## 重命名快捷键
 `ctrl+shift+ri` 比在后端用grep、sed更快。
 

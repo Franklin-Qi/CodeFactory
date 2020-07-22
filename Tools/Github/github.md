@@ -1,5 +1,32 @@
 # github 基本操作
 
+## 对象文件损坏
+bug: error: object file .git/objects/xxx is empty
+
+solutions:
+1. git init重头开始，最暴力最直接解决方案，但是这样之前的commit就没有了，短期的还好，长期的项目提交全不见了，貌似不太好
+2. git clone/fetch克隆或拉取其他人的项目，这样可以回溯到那个人项目的最新提交记录，可以挽救一些，万一你的项目比他新好多呢
+3. 可以恢复本机项目原本的git log记录，修一下坏的节点就好
+
+对于solutions_3 步骤如下：
+```
+1. 运行 git fsck --full
+2. 选中空文件，删除 rm filepath
+对于1，2可以用以下命令：
+$ find . -type f -empty -delete -print
+
+3. 运行 git fsck --full，还是有错，head指向元素不存在，是之前一个空文件
+4. 手动获得最后两条reflog ,运行tail -n 2 .git/logs/refs/heads/ia
+xxx1 xxx2 shuoqi.yu<yushuoqi@kylinos.cn> ...
+
+5. head当前是指向最新的那一条记录，所以我们看一下parent commit 即倒数第二条提交 git show xxx2,可以看到内容，是好着的
+
+6. 我们就重新设置head,使其指向倒数第二条 git update-ref HEAD xxx2
+
+7. .最后提交新代码就OK了。这样保留下来我们的git log记录，只是修一下坏的节点而已。
+
+```
+
 ##  两个仓库同步
 1. diff和patch对两个仓库进行同步,
 
