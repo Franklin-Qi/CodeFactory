@@ -1,5 +1,8 @@
 # kylin-scanner
 
+## 更改svg图标的颜色
+使用编辑器vim打开min_white.svg，增加fill="#fff"，将黑色变为白色
+
 ## 不同主题的图标放置
 $ apt-file search kylin-video.png
 $ apt-file list ubuntukylin-theme  | grep kylin-video
