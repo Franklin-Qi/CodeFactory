@@ -1,5 +1,90 @@
 # kylin-scanner
 
+## debuild 遇到了dpkg-deb: error: subprocess returned error exit status 2
+将../下除了kylin-scanner项目以外的文件都删除
+refer to : https://blog.csdn.net/fearlessxjdx/article/details/105230855
+
+## lintian 是否通过和结果修改
+
+一. lintian检查是否通过:
+自动调用 可以在pdebuild、debuild时自动调用，详见相关说明文件。
+手动处理 debuild、pdebuild编包后会生成foo-version.amd64.changes文件,对其运行lintian, 解决全部报告的"E"和"W",其他的标注尽量解决(常见lintian错误和解决方法):
+> lintian -i -EvIL +pedantic --verbose ../kylin-scanner_1.0.0_amd64.changes > lintian.txt
+
+
+二. 结果修改
+里面E(错误) 和 W(警告)，需要处理下，其他的P和I尽量处理
+
+1. debian/control:
+decriptions: 每行不超过80，通过.vimrc设置set cc=80进行判断
+
+2. debian/watch:
+2.1 debian-watch-file-in-native-package:
+refer to https://wiki.debian.org/DEHS
+         https://wiki.debian.org/debian/watch
+add:
+
+version=4
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/kylin-scanner-$1\.tar\.gz/ \
+  https://github.com/ukui/kylin-scanner/releases .*/v?(\d\S+)\.tar\.gz
+
+删除debian/watch,不保存
+
+3. debian/copyright
+3.1 file-without-copyright-information xxx
+将xxx 放到debian/copyright 中
+
+3.2 bug1: missing-license-text-in-dep5-copyright
+在License 下应该添加文本，而且不应该全段证书内容，只需要最开始的几段
+
+3.3 bug2: ambiguous-paragraph-in-dep5-copyright
+在files字段范围内，没有多余空行
+
+3.4 dep5-copyright-license-name-not-unique gpl-3
+本段定义了已经定义的许可证。
+根据规范，简短的许可证名称在单个版权文件中必须唯一
+
+license下的值不能一样,GPL-3.0, GPL+-3.0可以
+
+3.5 copyright-file-contains-full-gpl-license
+GPL+-3.0 下应该改为GPL3，同时不应该包括所有的证书内容
+
+4. debian/changelog
+4.1 changes: bad-distribution-in-changes-file unstable
+将unstable 改为 trusty, focal, raring, focal-proposed
+参考 https://www.debian.org/doc/debian-policy/ch-docs.html#s-changelogs
+vi  /usr/share/doc/packagekit/changelog.Debian.gz
+
+5. debian/compat
+5.1 dh: error: Please specify the compatibility level in debian/compat
+compat 不能删除，应该保留，比如设为11
+
+```
+
+
+## 为了能正确地与上游ubuntu的包比较版本号大小
+请按以下规范确定v10.1和v10版本中修改的软件包的版本号。
+自研包：版本号要遵守debian规范：末尾必须是数字、版本号中不能有超过一个“-”、
+        源码格式为native的包版本号不要包含“-”。自研包版本号包含kord的都去掉，也不需要添加kylin关键字
+修改的上游的包规范：
+https://uq76pac93x.feishu.cn/docs/doccn5FmGiQtwIL1XEs5iChjT4c#MnEEUp
+
+## qt app 4k支持
+目前发现一个严重bug，某些型号国产2k屏笔记本上默认放大了一倍，大家先采用临时解决办法:
+加一个分辨率的判断
+```
+if (QApplication::desktop()->width() >= 2560) {
+        #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+                QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+                QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+        #endif
+    }
+```
+
+
+## 请软件开发者熟读以下文档
+了解Debian/control文件如何处理软件包之间的关系：https://www.debian.org/doc/debian-policy/ch-relationships.html
+
 ## 更改svg图标的颜色
 使用编辑器vim打开min_white.svg，增加fill="#fff"，将黑色变为白色
 
