@@ -1,5 +1,9 @@
 # kylin-scanner
 
+## 颜色转换
+RGB <==> hex
+https://www.sioe.cn/yingyong/yanse-rgb-16/
+
 ## debuild 遇到了dpkg-deb: error: subprocess returned error exit status 2
 将../下除了kylin-scanner项目以外的文件都删除
 refer to : https://blog.csdn.net/fearlessxjdx/article/details/105230855

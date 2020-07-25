@@ -49,7 +49,6 @@ Table of Contents
 | Accelerator | 加速器 |
 | Represent | 代表 |
 | Maintain | 维护 |
-| Opacity | 透明度 |
 | Elapsed | 经过时间，占用时间 |
 | Sophisticated | 复杂的 |
 | FLicker | 闪烁 |
@@ -164,3 +163,10 @@ Table of Contents
 | transformation | 变换,变换 |
 | composition | 组合，成分 |
 | audio | 音频的，音频 |
+| precision | 精度 |
+| suspicious | 怀疑的，不信任的 |
+| redundant | 过剩的，多余的 |
+| portability | 可移植性 |
+| tailor | 裁剪，裁切 |
+| focal | 中心的，焦点的 |
+| raring | 急切的，渴望的 |

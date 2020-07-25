@@ -1,4 +1,20 @@
 # shell script
+## 多行文本输入
+当前文本覆盖:
+```
+cat>test.txt<<EOF
+第一行文字
+第二行文字
+EOF
+```
+
+当前文本追加:
+```
+cat>>test.txt<<EOF
+第一行文字
+第二行文字
+EOF
+```
 ## 参考
 [脚本练习](http://www.freeos.com/guides/lsst/)
 
