@@ -4,7 +4,7 @@
 
 ## 常见问题
 
-1、rpmbuild -ba 失败？
+### 1、rpmbuild -ba 失败？
 
 现象描述:
 warning: Installed (but unpackaged) file(s) found:
@@ -21,7 +21,8 @@ warning: Installed (but unpackaged) file(s) found:
 rpm -e 正常；
 rpm -ba 正常。
 
-2、python /usr/sbin/neokylin-software-center_start.py 报模块tkinter或notify-python未找到？
+### 2、模块未找到
+python /usr/sbin/neokylin-software-center_start.py 报模块tkinter或notify-python未找到？
 - 1、yum search tkinter 进行查找相关rpm1，如在arm平台未找到，可以在兆芯或龙芯上找到相关.src.rpm包进行编译安装
 - 2、yum install rpm1，安装失败，考虑yum源是否正确
 - 3、再执行脚本
@@ -29,14 +30,26 @@ rpm -ba 正常。
 注：
 arm平台的yum源地址: http://10.1.123.232/kojifiles/repos/ns7.5-aarch64-nd-build/latest/aarch64/
 兆芯平台yum源地址：http://10.1.122.182/kojifiles/repos/nd7-x86-ty-zx-build/latest/x86_64/
-龙芯平台yum源地址：http://10.1.122.122/kojifiles/repos/nd7-mips64-ty-Release-build/latest/mips64el/
+已废弃龙芯平台yum源地址：http://10.1.122.122/kojifiles/repos/nd7-mips64-ty-Release-build/latest/mips64el/
+新的龙芯平台yum源地址：http://10.1.122.122/kojifiles/repos/nd7-mips64-ty-Release-3a4k-dev-build/latest/mips64el/
 
-3. yum downgrade降级失败
+### 3. yum downgrade降级失败
 可通过 --oldpackage
 
-4. yum remove 删除依赖恢复
+### 4. yum remove 删除依赖恢复
 通过/var/log/yum.log 查看当天Erase内容
 mate-system-log -> yum.log
+
+### 新环境如何进行改bug
+1. 环境配置
+1.1 vim文件进行拷贝
+1.2 /etc/yum.repo.d/下文件koji地址更改以及拷贝submit2koji.sh
+sudo yum clean all && sudo yum update
+当yum update依赖提示错误，可以先rpm -e xxx --nodeps，之后sudo yum update
+
+1.3 到koji得到地址xxx.src, 并进行rpm -ivh xxx.src
+1.4 解决依赖：sudo yum-builddep SPECS/caja.spec
+1.5 编译软件源码：rpmbuild -bp SPECS/caja.spec
 
 
 # 关于mutter 管理器的重复做补丁和rpm包问题
@@ -56,7 +69,6 @@ mate-system-log -> yum.log
 调试时，2,6步骤只需要不断重复，而步骤1只需要一次，这样就提高了效率。
 
 此方式适用于大多数情况，可安全使用。
-
 
 # koji 讲解
 nd: desktop 桌面
