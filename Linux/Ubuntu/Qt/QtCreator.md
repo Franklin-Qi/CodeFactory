@@ -1,4 +1,9 @@
 # QtCreator
+## 解决警告
+1.1 qt overriding recipe for target 'install_target'
+命令行进行qmake查看该行Makefile，查看有多行install_target，
+所以可以修改Pro文件，删除一个target设置。
+
 ## Your GStreamer installation is missing a plug-in 
 QMediaPlayer error:
 > sudo apt-get install ubuntu-restricted-extras

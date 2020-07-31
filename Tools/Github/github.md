@@ -1,5 +1,16 @@
 # github 基本操作
 
+## git 查看单独一个文件的修改历史
+1. 看到fileName相关的commit记录
+> git log filename
+
+2. 显示每次提交的diff
+> git log -p filenam
+
+3. 只看某次提交中的某个文件变化，可以直接加上fileName
+> git show c5e69804bbd9725b5dece57f8cbece4a96b9f80b filename
+
+
 ## 对象文件损坏
 bug: error: object file .git/objects/xxx is empty
 

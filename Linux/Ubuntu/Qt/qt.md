@@ -6,7 +6,7 @@
 还有的问题是会出现unknown type name 'QString'未定义标识符
 
 qtcreator5.12.4 => http://download.qt.io/archive/qt/
-sudo apt-get install gcc g++ libqt4-dev build-essential cmake 
+sudo apt-get install gcc g++ libqt4-dev build-essential cmake
 
 sudo apt-get install gcc g++   //安装 linux 下编程的编译器
 sudo apt-get install libqt4-dev  //不然编译时会出现错误“cannot find -lgl
@@ -19,14 +19,14 @@ sudo apt install openssh-server
                  libopencv-dev
                  vim git ctags
                  sane sane-utils xsane libsane-dev libsane
-                 libglib2.0-dev 
+                 libglib2.0-dev
                  tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-sim libleptonica-dev liblept5 libtesseract-dev
                  qtcreator qt5-default qttools5-dev-tools //这个有问题，需要在官网进行下载版本并安装
 
 注：
 自己生成的kylin-scanner包可以通过以下方式解决依赖问题：
 sudo dpkg -i *.deb
-sudo apt install -f 
+sudo apt install -f
 sudo dpkg -i *.deb
 
 ## 提示Kit不存在
@@ -40,7 +40,7 @@ sudo apt install libglib2.0-dev
 sudo apt install sane sane-utils xsane
 
 
-# How to getting start qt 
+# How to getting start qt
 通过兆芯的qt creator =>　Welcome => Tutorials => "Example"
 
 ## qt chinese
@@ -74,7 +74,7 @@ $ dpkg -L fcitx-frontend-qt5 | grep .so /usr/lib/x86_64-linux-gnu/qt5/plugins/pl
 然后复制这个文件到QT Creator目录：
 
 $ cd qt安装目录/Tools/QtCreator/lib/Qt/plugins/platforminputcontexts/
-$ cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so . 
+$ cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so .
 $ chmod +x libfcitxplatforminputcontextplugin.so
 
 然后重启QT Creator即可输入中文。
@@ -87,12 +87,12 @@ $ chmod +x libfcitxplatforminputcontextplugin.so
 3.通过翻译工具(Linguist)，对.ts文件进行翻译，发布生成.qm二进制文件
 4.在源码中加载.qm文件，实现国际化
 
-1. 如何标识我们需要翻译的内容？ 
+1. 如何标识我们需要翻译的内容？
   对用户可见的文本信息使用tr()进行封装。举例如下：
    label->setText(tr("Hello"));
 2. 如何通过Qtcreator生成.ts翻译文件?
   在工程文件中添加：TRANSLATIONS = zh_CN.ts
-  工具->外部->Qt语言家->更新翻译(lupdate) 
+  工具->外部->Qt语言家->更新翻译(lupdate)
 小总结：
     1. 如果翻译失败，首先先检查有没有使用tr()进行封装。
     2. ts文件的名称可以自定义。但一般以区域代码表示。zh_CN表示简体中文。
@@ -104,7 +104,7 @@ $ chmod +x libfcitxplatforminputcontextplugin.so
   translator.load(QString("/usr/share/zh_CN.qm"));
   a.installTranslator(&translator);
 小提示：
-    1. 上面加载翻译文件的代码，要放到创建部件代码之前。      
+    1. 上面加载翻译文件的代码，要放到创建部件代码之前。
 
 Qt自带弹出框没有汉化:
 需要查看Qt源码中如何实现国际化：
