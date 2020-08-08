@@ -1,5 +1,10 @@
-## Longsn B62.3 修改
-### 问题描述
+## 龙芯 b62.3同方问题处理
+1. 桌面拖拽文件到U盘，桌面文件与U盘文件显示同时被选中，按delete键删除，删除的是桌面文件
+
+问题来源：
+同方
+
+复现步骤：
 选中桌面文件->鼠标拖拽文件到U盘->此时U盘内文件与桌面文件同时被选中，
 按delete键，删除的是桌面的文件。
 
@@ -10,10 +15,63 @@ http://10.1.80.209/REPO/ND7U2/LS/ISO/REL/BUILD62.3/0707/
 修改为与win一致：
 当拖拽桌面文件到U盘中时，桌面文件不选中，而U盘中文件选中，
 此时delete则删除U盘中的文件。
+
+## 相关文件
+disk => vi src/caja-places-sidebar.c
+
 ### 解决方案
 可以参考ctrl+c/v 后delete，虽然都是选中，但删除的是U盘中的。
 
 猜测问题难点在于如何区分U盘和桌面文件。
+
+> sudo rpm -Uvh RPMS/mips64el/* --replacepkgs --replacefiles
+
+display_selection_info_idle_callback
+=> fm_directory_view_display_selection_info(打印选中状态信息)
+如： "选中了“新建文本文件” (0 字节)"
+
+2. 在桌面选中文件的情况下，拖动文件至U盘，桌面文件名称会变成重命名格式
+
+### 解决方案
+问题来源：
+工厂
+
+问题描述：
+在桌面选中文件的情况下，拖动文件至U盘，桌面文件名称会变成重命名格式
+
+复现步骤：
+在桌面选中文件的情况下，拖动文件至U盘，桌面文件名称会变成重命名格式
+1.选中桌面文件
+2.直接拖动文件至U盘内
+
+由于之前修改过重命名的ctrl+z，可以断点跟踪，一直 next
+gdb跟踪断点：caja_icon_container_start_renaming_selected_item
+
+```
+Breakpoint 1, caja_icon_container_start_renaming_selected_item (container=0x1205af020 [FMIconContainer], select_all=0) at caja-icon-container.c:9716
+
+(gdb) n
+fm_icon_view_start_renaming_file (view=0x1205dc7a0 [FMDesktopIconView], file=0x1208d4ab0 [CajaVFSFile], select_all=0) at fm-icon-view.c:1690
+1690	}
+(gdb) n
+real_action_rename (view=0x1205dc7a0 [FMDesktopIconView], select_all=0) at fm-directory-view.c:6880
+6880		caja_file_list_free (selection);
+(gdb) n
+6881	}
+(gdb) n
+click_signal_rename (container=0x1205af020 [FMIconContainer], widget=0x120a13860, callback_data=0x1205dc7a0) at fm-icon-view.c:2972
+2972	}
+```
+
+解决方案：
+1.追加问题复现步骤：
+1）单击选择文件，再次单击拖动也会触发重命名
+2）单击文件，再次单击拖动到非U盘中也会出现重命名
+
+2. 解决方案
+由现象可知，该问题是由第二次单击已选择的文件，触发了重命名接口。
+因此可以屏蔽因单击已选择的文件而触发的重命名接口。
+全局搜索代码可知，修改后的代码不影响其他功能。
 
 
 ## caja 手动新建文件重叠到第一个图标处

@@ -170,3 +170,6 @@ Table of Contents
 | tailor | 裁剪，裁切 |
 | focal | 中心的，焦点的 |
 | raring | 急切的，渴望的 |
+| cumulative | 累积的 |
+| interval | 时间间隔 |
+| renice | 调整程序优先级 |

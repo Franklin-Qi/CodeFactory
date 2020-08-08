@@ -19,6 +19,10 @@ etime：运行时间
 ## ps -ef
 标准格式显示进程
 
+### 查看僵尸进程
+1. top => zombie
+ps -ef |grep defunct
+
 ## ps -aux
 BSD格式显示进程
 
