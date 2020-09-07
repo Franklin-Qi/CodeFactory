@@ -1,0 +1,49 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Add	Config.h	/^void Config::Add( const std::string& in_key, const T& value )$/;"	f	class:Config
+CC	Makefile	/^CC=gcc$/;"	m
+CXX	Makefile	/^CXX=g++$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS=-Wall -g$/;"	m
+Config	Config.cpp	/^Config::Config( string filename, string delimiter,$/;"	f	class:Config
+Config	Config.cpp	/^Config::Config()$/;"	f	class:Config
+Config	Config.h	/^class Config {$/;"	c
+FileExist	Config.cpp	/^bool Config::FileExist(std::string filename)$/;"	f	class:Config
+File_not_found	Config.h	/^        File_not_found( const std::string& filename_ = std::string() )$/;"	f	struct:Config::File_not_found
+File_not_found	Config.h	/^    struct File_not_found {$/;"	s	class:Config
+GetComment	Config.h	/^    std::string GetComment() const { return m_Comment; }$/;"	f	class:Config
+GetDelimiter	Config.h	/^    std::string GetDelimiter() const { return m_Delimiter; }$/;"	f	class:Config
+KeyExists	Config.cpp	/^bool Config::KeyExists( const string& key ) const$/;"	f	class:Config
+Key_not_found	Config.h	/^            Key_not_found( const std::string& key_ = std::string() )$/;"	f	struct:Config::Key_not_found
+Key_not_found	Config.h	/^        struct Key_not_found {  \/\/ thrown only by T read(key) variant of read()$/;"	s	class:Config
+LDFLAGS	Makefile	/^LDFLAGS=$/;"	m
+OBJS	Makefile	/^OBJS=$(patsubst %.cpp,%.o,$(SRCS))$/;"	m
+RM	Makefile	/^RM=rm -f$/;"	m
+Read	Config.h	/^T Config::Read( const std::string& key ) const$/;"	f	class:Config
+Read	Config.h	/^T Config::Read( const std::string& key, const T& value ) const$/;"	f	class:Config
+ReadFile	Config.cpp	/^void Config::ReadFile( string filename, string delimiter,$/;"	f	class:Config
+ReadInto	Config.h	/^bool Config::ReadInto( T& var, const std::string& key ) const$/;"	f	class:Config
+ReadInto	Config.h	/^bool Config::ReadInto( T& var, const std::string& key, const T& value ) const$/;"	f	class:Config
+Remove	Config.cpp	/^void Config::Remove( const string& key )$/;"	f	class:Config
+SRCS	Makefile	/^SRCS=$(wildcard *.cpp)$/;"	m
+SetComment	Config.h	/^    std::string SetComment( const std::string& in_s )$/;"	f	class:Config
+SetDelimiter	Config.h	/^    std::string SetDelimiter( const std::string& in_s )$/;"	f	class:Config
+TARGET	Makefile	/^TARGET = test$/;"	m
+T_as_string	Config.h	/^std::string Config::T_as_string( const T& t )$/;"	f	class:Config
+Trim	Config.cpp	/^void Config::Trim( string& inout_s )$/;"	f	class:Config
+filename	Config.h	/^        std::string filename;$/;"	m	struct:Config::File_not_found
+key	Config.h	/^            std::string key;$/;"	m	struct:Config::Key_not_found
+m_Comment	Config.h	/^    std::string m_Comment;    \/\/!< separator between value and comments$/;"	m	class:Config
+m_Contents	Config.h	/^    std::map<std::string,std::string> m_Contents;  \/\/!< extracted keys and values$/;"	m	class:Config
+m_Delimiter	Config.h	/^    std::string m_Delimiter;  \/\/!< separator between key and value$/;"	m	class:Config
+main	main.cpp	/^int main()$/;"	f
+mapci	Config.h	/^    typedef std::map<std::string,std::string>::const_iterator mapci;$/;"	t	class:Config
+mapi	Config.h	/^    typedef std::map<std::string,std::string>::iterator mapi;$/;"	t	class:Config
+operator <<	Config.cpp	/^std::ostream& operator<<( std::ostream& os, const Config& cf )$/;"	f
+operator >>	Config.cpp	/^std::istream& operator>>( std::istream& is, Config& cf )$/;"	f
+string_as_T	Config.h	/^T Config::string_as_T( const std::string& s )$/;"	f	class:Config
+string_as_T	Config.h	/^inline bool Config::string_as_T<bool>( const std::string& s )$/;"	f	class:Config
+string_as_T	Config.h	/^inline std::string Config::string_as_T<std::string>( const std::string& s )$/;"	f	class:Config

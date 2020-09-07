@@ -443,4 +443,12 @@ vim xxx.txt 之后使用 :X 进行输入密码，上传到GitHub的文件就是�
 ## 删除行尾空格
 > :2,3s/  *$//g
 
+## 自动代码格式调整
+```
+1. gg 跳转到第一行
+2. shift+v 转到可视模式
+3. shift+g 全选
+4. 按下神奇的 =
+```
+
 [参考](https://www.cnblogs.com/zl-graduate/p/5777711.html)

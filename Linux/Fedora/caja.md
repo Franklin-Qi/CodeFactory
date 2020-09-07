@@ -1,3 +1,11 @@
+## 加快caja编译
+rpm -ivh -D "_topdir `pwd`/caja-1.8.2-1.nd7.152" caja-1.8.2-1.nd7.152.src.rpm
+cd caja-1.8.2-1.nd7.152
+rpmbuild -ba -D "_topdir `pwd`" SPECS/caja.spec
+make
+make install
+
+
 ## 龙芯 b62.3同方问题处理
 1. 桌面拖拽文件到U盘，桌面文件与U盘文件显示同时被选中，按delete键删除，删除的是桌面文件
 
@@ -24,7 +32,7 @@ disk => vi src/caja-places-sidebar.c
 
 猜测问题难点在于如何区分U盘和桌面文件。
 
-> sudo rpm -Uvh RPMS/mips64el/* --replacepkgs --replacefiles
+> sudo rpm -Uvh RPMS/mips64el/*152.mips* --replacepkgs --replacefiles
 
 display_selection_info_idle_callback
 => fm_directory_view_display_selection_info(打印选中状态信息)
@@ -79,17 +87,21 @@ click_signal_rename (container=0x1205af020 [FMIconContainer], widget=0x120a13860
 ========v10 caja 日志打印 ========
 <syslog.h> => 日志打印头文件
 第一种方式：
-    openlog("test", LOG_CONS | LOG_PID, LOG_AUTHPRIV); => 打开日志开关
-    syslog(LOG_AUTHPRIV | LOG_WARNING, "==shuoqi.yu==%s==%s==%d=\n", __FILE__, __func__, __LINE__); => 日志打印
-    closelog(); => 关闭日志开关，最好每次打印时，都复制这3行
+    char mystr[1024] = "";
+    openlog("test", LOG_CONS | LOG_PID, LOG_AUTHPRIV);
+    memcpy(mystr, "test", 1024);
+    syslog(LOG_AUTHPRIV | LOG_WARNING, "[%s:%s:%d]: %s\n", __FILE__, __func__, __LINE__, mystr);
+    closelog();
 
 $ journalctl -f => 日志查看
 
 第二种方式： => 需要在/etc/rsyslog.conf末尾增加一行: local2.* /var/log/mylog , 并执行 systemctl restart rsyslog.service
 
-   openlog("myLog", LOG_CONS | LOG_PID, LOG_LOCAL2);
-   syslog(LOG_INFO, "==shuoqi.yu==%s==%s==%d=\n", __FILE__, __func__, __LINE__); => 日志打印
-   closelog(); => 关闭日志开关，最好每次打印时，都复制这3行
+   char mystr[1024] = "";
+   openlog("mylog", LOG_CONS | LOG_PID, LOG_LOCAL2);
+   memcpy(mystr, "test", 1024);
+   syslog(LOG_INFO, "[%s:%s:%d]: %s\n", __FILE__, __func__, __LINE__, mystr);
+   closelog();
 
 $ tail -f /var/log/mylog => 日志查看
 ========v10 caja 日志打印 ========
