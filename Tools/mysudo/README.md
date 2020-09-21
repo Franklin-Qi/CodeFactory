@@ -10,10 +10,14 @@ make
 # Install
 Using *root* privileges to exec cmds as following:
 ```
-chmod 777 mysudo
-chown root:root mysudo
-mv mysudo /usr/bin/
+sudo cp mysudo /usr/sbin
+sudo chown root:root /usr/sbin/mysudo
+sudo chmod 4777 /usr/sbin/mysudo
 
+```
+or just do this:
+```
+sudo bash install.sh
 ```
 
 # Examples

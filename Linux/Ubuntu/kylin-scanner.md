@@ -7,6 +7,31 @@ function mycppcheck {
 }
 ```
 
+## 初始ukui需要安装的依赖软件
+sudo apt install openssh-server
+                 libopencv-dev
+                 vim git ctags
+                 sane sane-utils xsane libsane-dev libsane
+                 libglib2.0-dev
+                 tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-sim libleptonica-dev liblept5 libtesseract-dev
+                 qtcreator qt5-default qttools5-dev-tools //这个有问题，需要在官网进行下载版本并安装
+
+注：
+自己生成的kylin-scanner包可以通过以下方式解决依赖问题：
+sudo dpkg -i *.deb
+sudo apt install -f
+sudo dpkg -i *.deb
+
+## 提示Kit不存在
+sudo apt install qt5-default qttools5-dev-tools
+option -> qt version -> 选择qmake路径为/usr/lib/qt5/bin/qmake
+
+## 提示gio-2.0 失败
+sudo apt install libglib2.0-dev
+
+## 提示sane失败，没找到sane.h头文件
+sudo apt install sane sane-utils xsane
+
 ## 颜色转换
 RGB <==> hex
 https://www.sioe.cn/yingyong/yanse-rgb-16/
@@ -230,3 +255,32 @@ git status
 ## 总结
 > 从零实现的思路
 > 站在用户角度，想得比现有需求更多，注重学习和提升
+
+
+## 总体设计
+后端功能检测可以通过`scanimage -L`(属于sane-utils) 查找设备。
+
+前端界面如下：
+### 1. widget.cpp:
+用于组合标题栏（titleBar.cpp），功能栏（funcBar.cpp），扫描设置栏（scanSet.cpp），
+扫描图片显示栏（scanDisplay.cpp）界面，同时也是连接各个文件信号之前的纽带。
+
+不同组合控件之间的信号连接，都需要在widget.cpp 上进行connect。
+
+### 2. titleBar.cpp
+用于标题栏的界面设计，如放大、缩小和关闭按钮。
+
+### 3. funcBar.cpp
+用于功能栏界面设计，如一键美化、智能纠偏、文字识别和普通扫描按钮。
+
+### 4. scanDisplay.cpp
+用于扫描图片显示界面设计，包括各种界面以及编辑框设计。
+
+### 5. 其他文件
+embelish.cpp：美化功能，oneClickEmbelish()直接美化指定目录的扫描图片
+
+interruptDlg.cpp: 创建扫描中断界面，显示各种中断错误信息。
+
+kylinCmb.cpp: 自定义组合框combobox控件，包括tooltip的美化。
+
+kylinSane.cpp: 后端扫描接口，使用单例模式进行共享一个单例对象。
