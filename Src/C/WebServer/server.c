@@ -47,6 +47,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     printf("监听中....\n");
+    printf("等待客户端连接。。。。\n\n");
 
 
     /*
@@ -57,7 +58,7 @@ int main(int argc, char *argv[])
     */
 
     /*接受连接请求，从此函数中返回后就可以开始通信了*/
-    printf("等待客户端连接。。。。\n\n");
+
     new_fd = accept(fd, (struct sockaddr *)&client_addr, &struct_len);
     printf("成功接收到一个客户端：%s\n", inet_ntoa(client_addr.sin_addr));
 

@@ -1,4 +1,316 @@
 # kylin-scanner
+## 系统主题修改
+src/plugins/ukui-feedback/ukuiFeedback.cpp
+void feedback::style_changed(QString)
+
+## github 提交规范
+每一个commit，请根据情况选择如下模板：
+
+新功能：
+
+    Feature: xxx (新功能描述，比如：添加了窗口列表预览的功能)
+
+        Link: xxx (禅道上需求的链接，没有的话，需要自己新建：禅道->项目->优麒麟20.04.1->添加研发需求)
+
+bug修复:
+
+    Fix: xxx （简要描述，比如：修复了时间排序的模式下文件不显示的问题）
+
+    Link: xxx （禅道上的bug链接）
+
+PS: git commit -am "Fix: xxxx; -> 这里直接按回车，即可换行
+
+Link: xxxx"
+
+## 保存文件汉化
+/home/yusq/Qt5.14.2/5.14.2/Src/qttranslations/translations/
+qt_zh_CN.ts 中拷贝以下行到项目ts文件中。
+```
+<context>
+    <name>QPlatformTheme</name>
+    <message>
+        <location filename="qplatformtheme.cpp" line="+704"/>
+        <source>Open</source>
+        <translation>打开</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+</context>
+<context>
+    <name>QFileDialog</name>
+    <message>
+        <location filename="../src/gui/dialogs/qfiledialog.cpp" line="+515"/>
+        <location line="+444"/>
+        <source>All Files (*)</source>
+        <translation>所有文件 (*)</translation>
+    </message>
+    <message>
+        <location line="+222"/>
+        <source>Directories</source>
+        <translation>目录</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location line="+50"/>
+        <location line="+1471"/>
+        <location line="+75"/>
+        <source>&amp;Open</source>
+        <translation>打开(&amp;O)</translation>
+    </message>
+    <message>
+        <location line="-1596"/>
+        <location line="+50"/>
+        <source>&amp;Save</source>
+        <translation>保存(&amp;S)</translation>
+    </message>
+    <message>
+        <location line="-730"/>
+        <source>Open</source>
+        <translation>打开</translation>
+    </message>
+    <message>
+        <location line="+1515"/>
+        <source>%1 already exists.
+Do you want to replace it?</source>
+        <translation>%1已经存在。
+你想要替换它么？</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>%1
+File not found.
+Please verify the correct file name was given.</source>
+        <translation>文件%1
+没有找到。
+请核实已给定正确文件名。</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/itemviews/qdirmodel.cpp" line="+402"/>
+        <source>My Computer</source>
+        <translation>我的计算机</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/dialogs/qfiledialog.cpp" line="-1504"/>
+        <source>&amp;Rename</source>
+        <translation>重命名(&amp;R)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Delete</source>
+        <translation>删除(&amp;D)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show &amp;hidden files</source>
+        <translation>显示隐藏文件(&amp;H)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/dialogs/qfiledialog.ui"/>
+        <location filename="../src/gui/dialogs/qfiledialog_wince.ui"/>
+        <source>Back</source>
+        <translation>后退</translation>
+    </message>
+    <message>
+        <location/>
+        <location filename="../src/gui/dialogs/qfiledialog_wince.ui"/>
+        <source>Parent Directory</source>
+        <translation>父目录</translation>
+    </message>
+    <message>
+        <location/>
+        <location filename="../src/gui/dialogs/qfiledialog_wince.ui"/>
+        <source>List View</source>
+        <translation>列表视图</translation>
+    </message>
+    <message>
+        <location/>
+        <location filename="../src/gui/dialogs/qfiledialog_wince.ui"/>
+        <source>Detail View</source>
+        <translation>详细视图</translation>
+    </message>
+    <message>
+        <location/>
+        <location filename="../src/gui/dialogs/qfiledialog_wince.ui"/>
+        <source>Files of type:</source>
+        <translation>文件类型：</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/dialogs/qfiledialog.cpp" line="+6"/>
+        <location line="+648"/>
+        <source>Directory:</source>
+        <translation>目录：</translation>
+    </message>
+    <message>
+        <location line="+794"/>
+        <location line="+862"/>
+        <source>%1
+Directory not found.
+Please verify the correct directory name was given.</source>
+        <translation>目录%1
+没有找到。
+请核实已给定正确目录名。</translation>
+    </message>
+    <message>
+        <location line="-218"/>
+        <source>&apos;%1&apos; is write protected.
+Do you want to delete it anyway?</source>
+        <translation>“%1“是写保护的。
+你还是想删除它么？</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Are sure you want to delete &apos;%1&apos;?</source>
+        <translation>你确认你想删除“%1“？</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Could not delete directory.</source>
+        <translation>不能删除目录。</translation>
+    </message>
+    <message>
+        <location line="+407"/>
+        <source>Recent Places</source>
+        <translation>最近的地方</translation>
+    </message>
+    <message>
+        <location line="-2550"/>
+        <source>Save As</source>
+        <translation>另存为</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/itemviews/qfileiconprovider.cpp" line="+411"/>
+        <source>Drive</source>
+        <translation>驱动器</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+1"/>
+        <source>File</source>
+        <translation>文件</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Unknown</source>
+        <translation>未知的</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/dialogs/qfiledialog.cpp" line="-4"/>
+        <source>Find Directory</source>
+        <translation>查找目录</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Show </source>
+        <translation>显示 </translation>
+    </message>
+    <message>
+        <location filename="../src/gui/dialogs/qfiledialog.ui"/>
+        <location filename="../src/gui/dialogs/qfiledialog_wince.ui"/>
+        <source>Forward</source>
+        <translation>前进</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/dialogs/qfiledialog.cpp" line="+1970"/>
+        <source>New Folder</source>
+        <translation>新建文件夹</translation>
+    </message>
+    <message>
+        <location line="-1963"/>
+        <source>&amp;New Folder</source>
+        <translation>新建文件夹(&amp;N)</translation>
+    </message>
+    <message>
+        <location line="+656"/>
+        <location line="+38"/>
+        <source>&amp;Choose</source>
+        <translation>选择(&amp;C)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/dialogs/qsidebar.cpp" line="+418"/>
+        <source>Remove</source>
+        <translation>移除</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/dialogs/qfiledialog.cpp" line="-687"/>
+        <location line="+652"/>
+        <source>File &amp;name:</source>
+        <translation>文件名称(&amp;N)：</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/dialogs/qfiledialog.ui"/>
+        <location filename="../src/gui/dialogs/qfiledialog_wince.ui"/>
+        <source>Look in:</source>
+        <translation>查看：</translation>
+    </message>
+    <message>
+        <location/>
+        <location filename="../src/gui/dialogs/qfiledialog_wince.ui"/>
+        <source>Create New Folder</source>
+        <translation>创建新文件夹</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/dialogs/qfiledialog_win.cpp" line="+160"/>
+        <source>All Files (*.*)</source>
+        <translation>所有文件 (*.*)</translation>
+    </message>
+</context>
+```
+
+## 配合libsane-dev和gdb进行调试
+debuild 后进行安装dbgsysm字符串的包（类似-g生成的包，进行调试）,
+进行编译libsane-dev的包，可以gdb进行行数判断。
+
+## 在没有扫描仪情况下，调试编辑图片界面
+
+## launchpad.dev没法登陆
+目前只在火狐浏览器上可以，about:config 搜索preload，修改 
+network.stricttransportsecurity.preloadlist 为false。
+
+## 护网期间网络配置
+1. hosts
+192.168.30.200 launchpad.dev answers.launchpad.dev archive.launchpad.dev api.launchpad.dev bazaar.launchpad.dev bazaar-internal.launchpad.dev blueprints.launchpad.dev bugs.launchpad.dev code.launchpad.dev feeds.launchpad.dev keyserver.launchpad.dev lists.launchpad.dev ppa.launchpad.dev private-ppa.launchpad.dev testopenid.dev translations.launchpad.dev xmlrpc-private.launchpad.dev xmlrpc.launchpad.dev
+
+192.168.240.110 kydcserver.kylin.com
+192.168.0.175   distro.kylin.com
+192.168.0.175   builder.kylin.com
+192.168.6.176   pm.kylin.com
+192.168.6.179   pm2.kylin.com
+172.19.0.52     www.kylin.com
+172.19.0.52     mail.kylin.com
+172.19.0.52     sso.kylin.com
+192.168.6.55    zsk.kylin.com
+
+2. apt源
+更正补充一下：
+原v10.1ppa冻结，转正式版本v10.1系列，后续传包传新地址
+系列代号定为 v101，对应版本号10.1，changelog写v101
+版本系列地址： https://launchpad.dev/kylin-desktop/v101
+源码包查看地址：https://launchpad.dev/+kylin/archive_publish?distro=kylin-desktop&series=v101
+上传源码: dput dev:kylin-desktop/v101-proposed xxxx_source.changes
+v10.1内网开发源：deb http://archive.launchpad.dev/kylin v101 main restricted universe multiverse
+
+## 当修改源码后，debuild失败？
+v10.1 13
+ukui2004 12
+
+
+1. 使用 dpkg-buildpackage -B
+2. debian/compat: quilt => native
+
+如果需要补丁包，则可以dpkg-source --commit 或者 quilt
+
+## valgrind分析内存泄漏
+分析内存泄漏有malloc_hook、mtrace、valgrind，mtrace每次要生成文件记录，
+不方便经常调试。也只有valgrind一个选择。之前不用valgrind是因为代码用的库比较多，
+libev、boost、STL...，其中libev文档指明valgrind对它的检测结果有误，
+所以开始不用。不过现在也无所谓了，知道有这么回事就好。
+
+sudo apt install valgrind
+
+之后在qtcreator中进行分析-》valgrind内存分析
 
 ## cppcheck静态代码检查
 ```
@@ -21,6 +333,9 @@ sudo apt install openssh-server
 sudo dpkg -i *.deb
 sudo apt install -f
 sudo dpkg -i *.deb
+
+
+v10 arm的depends cannot handle, it can be showed in qtcreator.
 
 ## 提示Kit不存在
 sudo apt install qt5-default qttools5-dev-tools

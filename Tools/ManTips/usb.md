@@ -1,4 +1,13 @@
 # 挂载USB
+```
+mkdir /mnt/usb
+df or sudo fdisk -l
+mount (-t vfat|nfs) /dev/sdb1 /mnt/usb
+cd /mnt/usb/
+
+umount /mnt/usb
+```
+
 ## usb category
 NTFS => 部分操作系统，如果仅windows可选
 FAT  => 所有操作系统，linux通用
