@@ -22,7 +22,7 @@ PS: git commit -am "Fix: xxxx; -> 这里直接按回车，即可换行
 
 Link: xxxx"
 
-## 保存文件汉化
+## 翻译，保存文件汉化
 /home/yusq/Qt5.14.2/5.14.2/Src/qttranslations/translations/
 qt_zh_CN.ts 中拷贝以下行到项目ts文件中。
 ```

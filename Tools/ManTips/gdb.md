@@ -78,7 +78,7 @@ $17 = 0x1206cf470 "选中了“新建文本文件” (0 字节)"
 type = CajaIcon *
 
 # 设置漂亮显示结构体
-gdb) set print pretty on
+gdb) sm_mainTray = new QSystemTrayIcon(Images::icon("logo", 22), this);et print pretty on
 
 # 打印结构体值
 (gdb) print *icon
