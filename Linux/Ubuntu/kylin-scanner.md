@@ -574,6 +574,9 @@ git status
 
 ## 总体设计
 后端功能检测可以通过`scanimage -L`(属于sane-utils) 查找设备。
+```
+scanimage --device-name=pixma:04A91912_435F94 --resolution=300 --format=jpeg >scanner.jpg
+```
 
 前端界面如下：
 ### 1. widget.cpp:
