@@ -83,8 +83,13 @@ ns: server 服务器
 ## 第一次从gerrit上git下来空的目录, 用除cs2c的版本在fedora查找指定的版本下载并在gerrit仓库目录安装
   923  wget https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive01/packages/gsettings-desktop-schemas/3.14.1/1.fc21/src/gsettings-desktop-schemas-3.14.1-1.fc21.src.rpm
   925  cd nd7.0-gsettings-desktop-schemas-3.14.1/
-  927  rpm -ivh -D "_topdir `pwd`" ../gsettings-desktop-schemas-3.14.1-1.fc21.src.rpm  // 在fedora下载的原始源码包(无cs2c人员修改)
+
+  927  rpm -ivh -D "_topdir `pwd`" ../gsettings-desktop-schemas-3.14.1-1.fc21.src.rpm  // 在fedora下载的原始源码包(无cs2c人员修改),这是到~/rpmbuild中
   929  rpmbuild  -bp -D "_topdir `pwd`" SPECS/gsettings-desktop-schemas.spec
+or 
+  344  rpm -ivh -D "_topdir `pwd`/glib2-2.50.3-3.nd7.7" glib2-2.50.3-3.nd7.7.src.rpm // 这是到~/glib2-2.50.3-3.nd7.7中
+  347  rpmbuild -bp -D "_topdir `pwd`" SPECS/glib2.spec // 或者装到指定目录
+
   935  git add .
   936  git status
   937  git commit -m "BASE"
